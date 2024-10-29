@@ -13,7 +13,7 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.gymnotes.deploy" 
+      "bundleIdentifier": "com.gymnotes.deploy"
     },
     "android": {
       "package": "com.gymnotes.deploy",
@@ -33,6 +33,10 @@
       "eas": {
         "projectId": "e88741ab-6f3a-44cf-9651-de491dfe24a9"
       }
+    },
+    "runtimeVersion": "1.0.0", 
+    "updates": {
+      "url": "https://u.expo.dev/e88741ab-6f3a-44cf-9651-de491dfe24a9"
     }
   }
 }
