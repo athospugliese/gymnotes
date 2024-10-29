@@ -12,10 +12,11 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.gymnotes.deploy" 
     },
     "android": {
-      "package": "com.gymnotes.deploy", 
+      "package": "com.gymnotes.deploy",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
