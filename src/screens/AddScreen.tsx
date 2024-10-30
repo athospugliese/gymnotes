@@ -4,7 +4,7 @@ import { Ionicons } from '@expo/vector-icons';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import AsyncStorage from '@react-native-async-storage/async-storage'; 
 import st from '../../src/THEME/GLOBAL';
-import colors from '../../src/THEME/THEME';
+import colors from '../../src/THEME/THEME.ts';
 
 interface Note {
   id: string;

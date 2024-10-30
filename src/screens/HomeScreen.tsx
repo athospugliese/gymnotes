@@ -4,8 +4,8 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import Card from 'src/COMPONENTS/Card';
 import Title from 'src/COMPONENTS/Title';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { useNavigation } from '@react-navigation/native'; // Alteração aqui
-import colors from '../../src/THEME/THEME';
+import { useNavigation } from '@react-navigation/native'; 
+import colors from '../../src/THEME/THEME.ts';
 
 interface Note {
   id: string;
@@ -20,16 +20,15 @@ interface Collection {
 }
 
 const HomeScreen: React.FC = () => {
-  const navigation = useNavigation(); // Usar useNavigation ao invés de receber as props diretamente
+  const navigation = useNavigation(); 
   const [notes, setNotes] = useState<Note[]>([]);
 
   const loadNotes = async () => {
     try {
-      // Carregar notas gerais
+
       const storedNotes = await AsyncStorage.getItem('notes');
       let allNotes: Note[] = storedNotes ? JSON.parse(storedNotes) : [];
   
-      // Carregar notas das coleções
       const storedCollections = await AsyncStorage.getItem('collections');
       if (storedCollections) {
         const collections: Collection[] = JSON.parse(storedCollections);
