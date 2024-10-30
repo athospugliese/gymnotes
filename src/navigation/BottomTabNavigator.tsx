@@ -1,12 +1,27 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { View, TouchableOpacity, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons'; 
 import HomeScreen from '../screens/HomeScreen';
-import SettingsScreen from '../screens/SettingsScreen';
 import AddScreen from '@screens/AddScreen';
+import CollectionsScreen from '../screens/CollectionsScreen';
+import { NavigatorScreenParams } from '@react-navigation/native';
+import { StyleSheet } from 'react-native';
 
-const Tab = createBottomTabNavigator();
+declare global {
+  namespace ReactNavigation {
+    interface RootParamList extends RootStackParamList {}
+  }
+}
+
+type RootStackParamList = {
+  Home: undefined;
+  Add: { id?: string; title?: string; description?: string };
+  Collections: undefined;
+  Configs: undefined;
+};
+
+
+const Tab = createBottomTabNavigator<RootStackParamList>();
 
 const BottomTabNavigator = () => {
   return (
@@ -31,8 +46,8 @@ const BottomTabNavigator = () => {
         }}
       />
       <Tab.Screen
-        name="Settings"
-        component={SettingsScreen}
+        name="Collections"
+        component={CollectionsScreen}
         options={{
           tabBarIcon: ({ focused }) => (
             <Ionicons

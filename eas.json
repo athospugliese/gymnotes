@@ -8,9 +8,21 @@
       "autoIncrement": true,
       "android": {
         "distribution": "internal",
-        "autoIncrement": "versionCode"
+        "autoIncrement": "versionCode",
+        "buildType": "apk"
       },
       "channel": "preview"
+    },
+    "preview2": {
+      "android": {
+        "gradleCommand": ":app:assembleRelease"
+      }
+    },
+    "preview3": {
+      "developmentClient": true
+    },
+    "preview4": {
+      "distribution": "internal"
     },
     "production": {
       "autoIncrement": true,
@@ -28,9 +40,8 @@
     "preview": {
       "android": {
         "track": "internal",
-        // "servicesAccountKeyPath": "google-services.json",
         "releaseStatus": "draft"
-      },
+      }
     }
   }
 }
