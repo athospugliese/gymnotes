@@ -33,7 +33,7 @@ jobs:
           token: ${{ secrets.EXPO_TOKEN }}
 
       - name: Build APK on EAS
-        run: eas build --platform android --profile preview --non-interactive
+        run: eas build -p android --profile preview
 
       - name: Wait for build to complete
         run: eas build:wait
