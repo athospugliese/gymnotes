@@ -5,7 +5,7 @@ import Card from 'src/COMPONENTS/Card';
 import Title from 'src/COMPONENTS/Title';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native'; // Alteração aqui
-import colors from '@styles/THEME';
+import colors from '../../src/THEME/THEME';
 
 interface Note {
   id: string;
